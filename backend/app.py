@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,send_from_directory
 from flask_mail import Mail, Message
 from flask_cors import CORS
 import os
@@ -8,7 +8,7 @@ load_dotenv(dotenv_path='/.env')
 print(f"MAIL_USERNAME: {os.getenv('MAIL_USERNAME')}")
 print(f"MAIL_PASSWORD: {os.getenv('MAIL_PASSWORD')}")
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../portfolio/dist", static_url_path="")
 
 CORS(app)
 
@@ -24,7 +24,7 @@ mail = Mail(app)
 
 @app.route('/')
 def home():
-    return "Hii"
+    return send_from_directory(app.static_folder, "index.html")
 
 @app.route('/send_email', methods=['POST'])
 def send_email():
