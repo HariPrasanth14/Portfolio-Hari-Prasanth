@@ -80,6 +80,9 @@ useEffect(()=>{
         className="
           rounded-3xl 
           mb-4
+          shadow-[0_0_5px_1px_white]
+          border
+          border-black
         " 
         style={{
           height: '230px',
@@ -95,10 +98,10 @@ useEffect(()=>{
         sm:text-3xl 
         md:text-3xl 
         lg:text-2xl 
-        xl:text-3xl 
+        xl:text-3xl
         font-serif
       ">
-        Hari Prasanth M
+        Hari Prasanth 
       </h1>
 
       <p className="
