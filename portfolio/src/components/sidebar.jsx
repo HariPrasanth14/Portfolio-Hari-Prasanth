@@ -1,4 +1,4 @@
-import { FaEnvelope, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope, FaGit, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 import dpImg from '../assets/dp.jpg';
 import { FaLocationDot } from 'react-icons/fa6';
 import { useEffect, useState } from 'react';
@@ -122,7 +122,8 @@ useEffect(()=>{
       </p>
       
       <hr className="
-        my-8 
+        mt-8 
+        mb-5
         w-full 
         border-gray-400
       " />
@@ -145,11 +146,17 @@ useEffect(()=>{
           link="https://www.linkedin.com/in/m-hari-prasanth-fsd-ev/"
         />
         <ContactItem
-          Icon={FaLocationDot}
-          title="Address"
-          content="Coimbatore - 103"
+          Icon={FaGithub}
+          title="Github"
+          content="https://github.com/HariPrasanth14"
           link="/contact"
         />
+      <ContactItem
+        Icon={FaLocationDot}
+        title="Address"
+        content="Coimbatore - 103"
+        link="/contact"
+      />
       </div>
     </div>
   );
