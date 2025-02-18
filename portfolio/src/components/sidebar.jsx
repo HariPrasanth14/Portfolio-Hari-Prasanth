@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGit, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 import dpImg from '../assets/dp.jpg';
 import { FaLocationDot } from 'react-icons/fa6';
 import { useEffect, useState } from 'react';
@@ -149,7 +149,7 @@ useEffect(()=>{
           Icon={FaGithub}
           title="Github"
           content="https://github.com/HariPrasanth14"
-          link="/contact"
+          link="https://github.com/HariPrasanth14"
         />
       <ContactItem
         Icon={FaLocationDot}
