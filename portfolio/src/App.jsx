@@ -8,12 +8,14 @@ import Sidebar from './components/sidebar';
 import Footer from "./components/footer";
 import Education from "./components/Education";
 
+
+
 function App() {
   
 
   return (
 <>
- <BrowserRouter>
+  <BrowserRouter>
     <Routes>
         <Route path="/" element={<Home />}/>
         <Route path='/navbar' element={<Navbar />} />
@@ -24,9 +26,11 @@ function App() {
         <Route path="/footer" element={<Footer />} />
         <Route path='/education' element={<Education />} />
      </Routes>
-</BrowserRouter>
+</BrowserRouter> 
 </>
   );
 }
 
 export default App;
+
+

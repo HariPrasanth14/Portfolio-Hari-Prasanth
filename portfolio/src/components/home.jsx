@@ -10,7 +10,7 @@ import react_icon from "../assets/react.png";
 import python_icon from "../assets/python-logo.png";
 import Flask_logo from "../assets/flask.png";
 import mysql_img from "../assets/mysql.png";
-import reduc_icon from "../assets/redux.png";
+import node_icon from "../assets/node.png";
 import postman_icon from "../assets/postman.png";
 import github from '../assets/github.png';
 import Footer from "./footer";
@@ -82,7 +82,7 @@ function Home() {
                             text-xl 
                             md:text-3xl 
                             font-serif
-                        ">Technical Skills</p>
+                        " title="These are the technologies I specialize in!">Technical Skills</p>
                         <hr className="
                             w-16 
                             h-1 
@@ -94,7 +94,6 @@ function Home() {
                         " />
 
                         <div className="
-                            
                             skills 
                             md:mx-5
                             lg:mx-5 
@@ -107,20 +106,20 @@ function Home() {
                             xl:grid-cols-4 
                             gap-10 
                             text-center
-                        ">
+                        " title="Hover over each skill to learn what it does!">
                             {[
-                                { img: html_img, name: "HTML" },
-                                { img: css_img, name: "CSS" },
-                                { img: Boot_img, name: "Bootstrap" },
-                                { img: tailwind_img, name: "Tailwind CSS" },
-                                { img: Javacript_icon, name: "Java Script" },
-                                { img: react_icon, name: "React" },
-                                { img: python_icon, name: "Python" },
-                                { img: Flask_logo, name: "Flask" },
-                                { img: mysql_img, name: "MySQL" },
-                                { img: reduc_icon, name: "Redux" },
-                                { img: postman_icon, name: "Postman" },
-                                { img: github, name: 'GitHub' }
+                                { img: html_img, name: "HTML", title: "Used to structure the content of a website" },
+                                { img: css_img, name: "CSS", title: "Styles and designs websites to make them visually appealing" },
+                                { img: Boot_img, name: "Bootstrap", title: "A CSS framework for responsive and fast UI development" },
+                                { img: tailwind_img, name: "Tailwind CSS", title: "A utility-first CSS framework for rapid styling" },
+                                { img: Javacript_icon, name: "JavaScript", title: "Adds interactivity and dynamic features to websites" },
+                                { img: react_icon, name: "React", title: "A JavaScript library for building modern web applications" },
+                                { img: python_icon, name: "Python", title: "A versatile programming language used for web, AI, and more" },
+                                { img: Flask_logo, name: "Flask", title: "A lightweight Python web framework" },
+                                { img: mysql_img, name: "MySQL", title: "A database system to store and manage website data" },
+                                { img: node_icon, name: "Node.js & Express.js", title: "Backend technologies for building web applications" },
+                                { img: postman_icon, name: "Postman", title: "Used for testing APIs and backend services" },
+                                { img: github, name: 'GitHub', title: "A platform for version control and collaboration" }
                             ].map(skill => (
                                 <div key={skill.name} className="
                                     skill-box 
@@ -136,8 +135,7 @@ function Home() {
                                     hover:cursor-none 
                                     hover:shadow-[0_0_rgba(243, 178, 0, 0.993] 
                                     group
-
-                                ">
+                                " title={skill.title}>
                                     <img src={skill.img} className="
                                         mx-auto 
                                         transform 
@@ -167,7 +165,7 @@ function Home() {
                             text-xl
                             md:text-3xl 
                             font-serif
-                        ">What I'm Doing</h1>
+                        " title="Things I love to do!">What I'm Doing</h1>
                         <hr className="
                             w-16 
                             h-1 
@@ -183,30 +181,13 @@ function Home() {
                             justify-center 
                             grid 
                             grid-cols-1
-                            
                             xl:grid-cols-2
                         ">
                             {[
-                                {
-                                    icon: FaLaptopCode,
-                                    title: "Web Development",
-                                    description: "I create responsive and dynamic websites, ensuring a seamless user experience and robust functionality."
-                                },
-                                {
-                                    icon: FaLightbulb,
-                                    title: "Learning New Technology",
-                                    description: "Constantly exploring new technologies to stay updated and improve my skill set in the evolving tech landscape."
-                                },
-                                {
-                                    icon: FaRobot,
-                                    title: "Exploring AI",
-                                    description: "Delving into artificial intelligence to understand its capabilities and develop AI-driven solutions."
-                                },
-                                {
-                                    icon: FaPaintBrush,
-                                    title: "Drawing",
-                                    description: "Engaging in drawing to relax and enhance concentration, fostering a creative mindset and a tranquil state of mind."
-                                }
+                                { icon: FaLaptopCode, title: "Web Development", desc: "I create modern, responsive websites with great functionality", tooltip: "I build and develop user-friendly websites!" },
+                                { icon: FaLightbulb, title: "Learning New Technology", desc: "Constantly exploring new technologies to stay updated and improve my skill set in the evolving tech landscape.", tooltip: "I stay up to date with the latest tech trends!" },
+                                { icon: FaRobot, title: "Exploring AI", desc: "Delving into artificial intelligence to understand its capabilities and develop AI-driven solutions.", tooltip: "Learning AI to create smart applications!" },
+                                { icon: FaPaintBrush, title: "Drawing", desc: "Engaging in drawing to relax and enhance concentration, fostering a creative mindset and a tranquil state of mind.", tooltip: "I love expressing creativity through art!" }
                             ].map((activity, index) => (
                                 <div key={index} className="
                                     box 
@@ -223,32 +204,22 @@ function Home() {
                                     shadow-lg 
                                     border-2 
                                     border-gray-700
-                                ">
+                                " title={activity.tooltip}>
                                     <div>
-                                        <activity.icon className="
-                                            text-3xl 
-                                            text-yellow-400
-                                        " />
+                                        <activity.icon className="text-3xl text-yellow-400" />
                                     </div>
                                     <div>
-                                        <h1 className="
-                                            text-start 
-                                            text-sm
-                                            md:text-lg 
-                                            text-yellow-400
-                                        ">{activity.title}</h1>
-                                        <p className="
-                                            text-xs
-                                            md:text-sm 
-                                            text-start
-                                        ">{activity.description}</p>
+                                        <h1 className="text-start text-sm md:text-lg text-yellow-400">{activity.title}</h1>
+                                        <p className="text-xs md:text-sm text-start">{activity.desc}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
             </div>
+
             <br />
             <Footer />
         </div>

@@ -1,6 +1,6 @@
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
-import ResumeImg from '../assets/Hari-Prasanth-M-fullstack-developer_page-0001.jpg';
+import ResumeImg from '../assets/Hari-Prasanth-M-fullstack-developer.jpg';
 import Footer from "./footer";
 import hari_resume from '../assets/Hari-Prasanth-M-FSD.pdf'
 import { FaDownload } from "react-icons/fa";
@@ -50,10 +50,8 @@ function Resume() {
                           
                           
                           resume_img
-                          my-5
-                          
+                          my-5 
                           xl:py-0
-                          rounded-xl 
                           
                           " 
             />
