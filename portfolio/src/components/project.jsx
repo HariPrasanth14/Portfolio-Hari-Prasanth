@@ -8,9 +8,16 @@ import Event_Managment from "../assets/eventmanage_img.png";
 import dashboard from "../assets/Dashboard.png";
 import VideoStreaming_Website from "../assets/VideoStreaming.png";
 import Footer from "./footer";
+import govreport from "../assets/govreport.png";
+import younder from "../assets/younder.png";
+
+// https://superb-fairy-f33f55.netlify.app/
+
 
 function Project() {
   const projects = [
+    { name: "GovReports Dashboard", link: "https://courageous-marigold-e18987.netlify.app/", img: govreport },
+
     { name: "Portfolio", link: "/", img: portflio_img },
     {
       name: "Vj Siddhu Website",
@@ -31,6 +38,10 @@ function Project() {
       name: "Event Management",
       link: "https://lovely-blini-5b9ed3.netlify.app/",
       img: Event_Managment,
+    },{
+      name: "Dashboard",
+      link: "https://superb-fairy-f33f55.netlify.app/",
+      img: younder,
     },
     { name: "Simple Dashboard", img: dashboard },
     { name: "Video Streaming Website", img: VideoStreaming_Website },
