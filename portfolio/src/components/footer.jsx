@@ -1,4 +1,6 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
+import { Link } from "react-router-dom"
+
 
 const Footer = ()=>{
 
@@ -13,7 +15,7 @@ const Footer = ()=>{
 <div className="bg-black rounded-3xl content-block">
     <ul className=" text-white py-10">
         <li className="flex justify-center mb-10">
-    
+            
     {List.map(tag =>(
 
         <a key={tag.Name} href={tag.links} className="flex footer-li">
@@ -35,9 +37,10 @@ const Footer = ()=>{
                     </li>
 
                     <li className="flex justify-center footer-li">
-                        <a href="/contact">
+                        
+                        <Link to="/contact">
                     <FaEnvelope className="text-3xl mx-4"/>
-                    </a>
+                    </Link>
                     </li>
 
                     </ul>
