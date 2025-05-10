@@ -50,7 +50,7 @@ const ContactItem = ({ Icon, title, content, link }) => (
 const Sidebar = () => {
 
 
-const titles = ['Web Developer','Frontend developer']
+const titles = ['Web Developer','Frontend Developer', 'Backend Developer' ,'Fullstack Developer' ,'MERN Developer']
 
 const [index , setIndex]=useState(0)
 
