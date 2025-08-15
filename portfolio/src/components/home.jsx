@@ -13,6 +13,9 @@ import mysql_img from "../assets/mysql.png";
 import node_icon from "../assets/node.png";
 import postman_icon from "../assets/postman.png";
 import github from '../assets/github.png';
+import postres from "../assets/postgresql.png"
+import mssql from "../assets/mssql-server.png"
+import monogdb from "../assets/mongodb.png";
 import Footer from "./footer";
 
 function Home() {
@@ -114,10 +117,13 @@ function Home() {
                                 { img: tailwind_img, name: "Tailwind CSS", title: "A utility-first CSS framework for rapid styling" },
                                 { img: Javacript_icon, name: "JavaScript", title: "Adds interactivity and dynamic features to websites" },
                                 { img: react_icon, name: "React", title: "A JavaScript library for building modern web applications" },
+                                { img: node_icon, name: "Node.js & Express.js", title: "Backend technologies for building web applications" },
                                 { img: python_icon, name: "Python", title: "A versatile programming language used for web, AI, and more" },
                                 { img: Flask_logo, name: "Flask", title: "A lightweight Python web framework" },
                                 { img: mysql_img, name: "MySQL", title: "A database system to store and manage website data" },
-                                { img: node_icon, name: "Node.js & Express.js", title: "Backend technologies for building web applications" },
+                                { img: postres, name: "PostgreSQL", title: "An advanced open-source relational database" },
+                                { img: mssql, name: "Microsoft SQL Server", title: "A relational database management system developed by Microsoft" },
+                                { img: monogdb, name: "MongoDB", title: "A NoSQL database for handling large volumes of data" },
                                 { img: postman_icon, name: "Postman", title: "Used for testing APIs and backend services" },
                                 { img: github, name: 'GitHub', title: "A platform for version control and collaboration" }
                             ].map(skill => (
@@ -184,7 +190,7 @@ function Home() {
                             xl:grid-cols-2
                         ">
                             {[
-                                { icon: FaLaptopCode, title: "Web Development", desc: "I create modern, responsive websites with great functionality", tooltip: "I build and develop user-friendly websites!" },
+                                { icon: FaLaptopCode, title: "Web Development", desc: "I create modern, responsive websites with great functionality with mordern tools .", tooltip: "I build and develop user-friendly websites!" },
                                 { icon: FaLightbulb, title: "Learning New Technology", desc: "Constantly exploring new technologies to stay updated and improve my skill set in the evolving tech landscape.", tooltip: "I stay up to date with the latest tech trends!" },
                                 { icon: FaRobot, title: "Exploring AI", desc: "Delving into artificial intelligence to understand its capabilities and develop AI-driven solutions.", tooltip: "Learning AI to create smart applications!" },
                                 { icon: FaPaintBrush, title: "Drawing", desc: "Engaging in drawing to relax and enhance concentration, fostering a creative mindset and a tranquil state of mind.", tooltip: "I love expressing creativity through art!" }

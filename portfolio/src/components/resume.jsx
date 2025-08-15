@@ -1,8 +1,9 @@
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
-import ResumeImg from '../assets/Hari-Prasanth-M-fullstack-developer.jpg';
 import Footer from "./footer";
 import hari_resume from '../assets/Hari-Prasanth-M-FSD.pdf'
+import resume_one from '../assets/resume-one.jpg';
+import resume_two from '../assets/resume-two.jpg';
 import { FaDownload } from "react-icons/fa";
 
 function Resume() {
@@ -40,7 +41,7 @@ function Resume() {
 
           <div className="flex-row pb-2">
             <img 
-              src={ResumeImg} 
+              src={resume_one} 
               alt="resume image" 
 
               
@@ -50,7 +51,23 @@ function Resume() {
                           
                           
                           resume_img
-                          my-5 
+                          mt-5 
+                          xl:py-0
+                          
+                          " 
+            />
+             <img 
+              src={resume_two} 
+              alt="resume image" 
+
+              
+              className="
+                          w-full
+                          px-7
+                          
+                          
+                          resume_img
+                           mb-5
                           xl:py-0
                           
                           " 

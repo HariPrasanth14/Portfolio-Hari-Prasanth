@@ -11,7 +11,7 @@ function Navbar() {
         '/resume': 'Resume',
         '/project': 'Project',
         '/contact': "Contact",
-        '/education': 'Education',
+        '/education': 'Career',
     };
 
     const currentPage = pageTitle[FileLocation.pathname] || "Portfolio";
@@ -65,7 +65,7 @@ function Navbar() {
                             </li>
                             <li className="mx-5">
                                 <Link to='/education' onClick={() => setMenuOpen(false)}>
-                                    Education
+                                    Career
                                 </Link>
                             </li>
                             <li className="mx-5">

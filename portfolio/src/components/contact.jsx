@@ -4,44 +4,54 @@ import Sidebar from './sidebar';
 import Footer from './footer';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+
+  const [formData, setFormData] = useState({
+    name:'',email:'',message:''
+  })
+
+  const [status,setStatus] = useState()
+
+  const handleChange = (e) =>{
     setFormData({
       ...formData,
-      [name]: value
-    });
-  };
+      [e.target.name]:e.target.value
+    })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('Sending...');
+    e.preventDefault()
+    setStatus("Sending...")
 
-    try {
-      const response = await fetch('http://localhost:5000/send_email', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+    try{
+      const response = await fetch("http://localhost:5000/api/send-mail",
+        {
+          method:"POST",
+          body:JSON.stringify(formData),
+          headers:{
+            'Content-Type':'application/json'
+          }
+        }
+      )
 
-      const result = await response.json();
-      if (response.ok) {
-        setStatus('Message sent successfully!');
-      } else {
+      if(response.ok){
+        setStatus("Message sent successfully!")
+      }else{
+        const result = await response.json();
         setStatus(`Error: ${result.message}`);
       }
-    } catch (error) {
-      setStatus('Error sending message.');
+      setTimeout(()=>{
+        setFormData({
+          name:'',
+          email:'',
+          message:''
+        })
+        setStatus("")
+      },4000)
+    }catch(err){
+      setStatus("Error sending message.")
     }
-  };
+  }
 
   return (
     <div className="bg-gray-900 pb-10 px-8 lg:px-4 xl:px-8 py-5">
@@ -150,8 +160,7 @@ const Contact = () => {
                         className="
                           bg-yellow-500 
                           text-black 
-                          font-semibold
-                          py-2 
+                           py-2 
                           px-4 
                           rounded-full 
                           hover:bg-yellow-950
@@ -160,11 +169,11 @@ const Contact = () => {
                           hover:shadow-[0_2px_8px_yellow]
                           active:translate-y-1
                           hover:text-white
-                          
-
                           transition 
                           ease-in-out 
                           duration-300
+                          text-xl
+                          font-bold
                         "
                       >
                         Send Message
