@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Navbar from './navbar';
 import Sidebar from './sidebar';
 import Footer from './footer';
+const HOST = import.meta.env.VITE_HOST
+
+console.log(HOST);
+
 
 const Contact = () => {
 
@@ -24,15 +28,17 @@ const Contact = () => {
     setStatus("Sending...")
 
     try{
-      const response = await fetch(`https://${process.env.HOST}/api/send-mail`,
+      const response = await fetch(`https://${HOST}/api/send-mail`,
         {
-          method:"POST",
+          method:"POST",  
           body:JSON.stringify(formData),
           headers:{
             'Content-Type':'application/json'
           }
         }
       )
+      console.log(response);
+      
 
       if(response.ok){
         setStatus("Message sent successfully!")
