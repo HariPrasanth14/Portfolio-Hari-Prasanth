@@ -3,6 +3,7 @@ import Navbar from './navbar';
 import Sidebar from './sidebar';
 import Footer from './footer';
 const HOST = import.meta.env.VITE_HOST
+import axios from "axios"
 
 console.log(HOST);
 
@@ -28,23 +29,20 @@ const Contact = () => {
     setStatus("Sending...")
 
     try{
-      const response = await fetch(`https://${HOST}/api/send-mail`,
-        {
-          method:"POST",  
-          body:JSON.stringify(formData),
-          headers:{
-            'Content-Type':'application/json'
-          }
-        }
-      )
-      console.log(response);
-      
+      if(!formData.email || !formData.name || !formData.message){
+        setStatus("Please fill in all fields.");
+        setTimeout(()=>setStatus(""),4000)
+        return;
+      }
 
-      if(response.ok){
-        setStatus("Message sent successfully!")
+
+      const response = await axios.post(`https://${HOST}/api/send-mail`,formData)            
+      console.log(response)
+      
+      if(response.data.message === "Email send successfully"){
+        setStatus("Message send successfully!")
       }else{
-        const result = await response.json();
-        setStatus(`Error: ${result.message}`);
+        setStatus(`Error: ${response.data.message}`);
       }
       setTimeout(()=>{
         setFormData({

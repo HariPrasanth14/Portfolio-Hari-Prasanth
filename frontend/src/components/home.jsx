@@ -17,8 +17,28 @@ import postres from "../assets/postgresql.png"
 import mssql from "../assets/mssql-server.png"
 import monogdb from "../assets/mongodb.png";
 import Footer from "./footer";
+import axios from "axios"
+import { useEffect } from "react";
+const VITE_HOST = import.meta.env.VITE_HOST
 
 function Home() {
+    
+    
+    useEffect(()=>{
+        async function startServer () {
+            try {
+                const response = await axios.get(`https://${VITE_HOST}/api/backend-start`);
+                console.log(response.data.message);
+            } catch (error) {
+                console.error("Error starting server:", error);
+            }
+        }
+
+    startServer()
+
+,[]
+    }
+    )
     return (
         <div className="bg-gray-900 px-8 lg:px-4 xl:px-8 py-5">
 

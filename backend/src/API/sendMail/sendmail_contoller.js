@@ -1,4 +1,4 @@
-const {emailService} = require("../utils/mail_service/mail_service")
+const {emailService} = require("../../utils/mail_service/mail_service")
 
 exports.sendMail = async(req,res)=>{
     try{
