@@ -102,6 +102,7 @@ const Contact = () => {
                           focus:ring-yellow-400 
                           p-2 
                           mt-3
+                          text-black
                         "
                         placeholder="Enter your name"
                         value={formData.name}
@@ -119,7 +120,7 @@ const Contact = () => {
                           w-full 
                           h-8
                           md:h-10
-
+                          text-black
                           rounded-xl 
                           focus:ring-4 
                           focus:outline-dashed 
