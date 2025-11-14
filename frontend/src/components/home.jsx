@@ -18,6 +18,7 @@ import mssql from "../assets/mssql-server.png"
 import monogdb from "../assets/mongodb.png";
 import Footer from "./footer";
 import axios from "axios"
+import fastApi from "../assets/fastApi.png"
 import { useEffect } from "react";
 const VITE_HOST = import.meta.env.VITE_HOST
 
@@ -139,6 +140,7 @@ function Home() {
                                 { img: react_icon, name: "React", title: "A JavaScript library for building modern web applications" },
                                 { img: node_icon, name: "Node.js & Express.js", title: "Backend technologies for building web applications" },
                                 { img: python_icon, name: "Python", title: "A versatile programming language used for web, AI, and more" },
+                                { img: fastApi, name: "Fast Api", title: "Fastest Python web framework" },
                                 { img: Flask_logo, name: "Flask", title: "A lightweight Python web framework" },
                                 { img: mysql_img, name: "MySQL", title: "A database system to store and manage website data" },
                                 { img: postres, name: "PostgreSQL", title: "An advanced open-source relational database" },
