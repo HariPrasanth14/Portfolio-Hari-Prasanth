@@ -28,7 +28,7 @@ const Education = () => {
                 xl:gap-6
                 justify-center
             ">
-                
+
                 <div className="
                     profile-block
                     w-full
@@ -39,7 +39,7 @@ const Education = () => {
                     <Sidebar />
                 </div>
 
-                 <div className="
+                <div className="
                     content-block
                     w-full
                     lg:w-3/4
@@ -49,15 +49,15 @@ const Education = () => {
                     rounded-3xl
                 ">
                     <Navbar />
-                    
-                     <div className="
+
+                    <div className="
                         content-area
                         m-2
                         md:m-5
                         p-5
                     ">
-                        <h1 className='text-white text-xl md:text-3xl font-serif'>Exprience</h1>
-                        <hr className='bg-yellow-500 h-1 w-16 rounded-bl-full rounded-tr-full'/>
+                        <h1 className='text-white text-xl md:text-3xl font-serif'>Experience</h1>
+                        <hr className='bg-yellow-500 h-1 w-16 rounded-bl-full rounded-tr-full' />
 
                         <div className=' border-4 
                                             border-dashed 
@@ -90,25 +90,27 @@ const Education = () => {
                                 <div className='text-base lg:text-2xl mb-2'>Backend Developer at Nubiznez pvt ltd</div>
 
                                 <div className='mb-2'>
-                                    
-                                    <div className="text-white text-base tracking-wider "> 
-                                        <span className=''> Tools Working With </span> 
+
+                                    <div className="text-white text-base tracking-wider ">
+                                        <span className=''> Tools Working With </span>
 
                                         <span className='text-green-400'> NodeJs</span>,
                                         <span className='text-yellow-400'> ExpressJs</span>,
+                                        <span className='text-red-500'> Python</span>,
+                                        <span className='text-green-400'> Fast Api </span>,
                                         <span className='text-blue-400'> PostgresSql </span>,
                                         <span className='text-red-500'> MSSql</span>
                                     </div>
                                 </div>
 
                                 <div className=''>
-                                     <div className="text-white text-base lg:text-base"> Duration : April 2025 to Present</div>
+                                    <div className="text-white text-base lg:text-base"> Duration : April 2025 to Present</div>
                                 </div>
                             </div>
                         </div>
 
                         {/*  */}
-                            <div className='
+                        <div className='
                                             md:flex 
                                             border-4 
                                             border-dashed 
@@ -139,10 +141,10 @@ const Education = () => {
                             <div className='text-center md:text-left'>
                                 <div className='text-base lg:text-2xl mb-2'>Mern Stack development Trainee <br /> KGISL Micro College - cbe</div>
 
-                                     <div className='mb-2'>
-                                        <span className='text-base'>Tools worked with</span>
+                                <div className='mb-2'>
+                                    <span className='text-base'>Tools worked with</span>
 
-                                         <span className="text-yellow-200 text-bas  tracking-wider">
+                                    <span className="text-yellow-200 text-bas  tracking-wider">
                                         <span></span>
                                         <span className='text-orange-400'> HTML</span>,
                                         <span className='text-blue-300'> CSS</span>,
@@ -154,12 +156,12 @@ const Education = () => {
                                         <span className='text-yellow-400'> ExpressJs</span>,
                                         <span className='text-green-500'> Mongo Db</span>
 
-                                       
-                                    </span> 
-                                     </div>
- 
+
+                                    </span>
+                                </div>
+
                                 <div className=''>
-                                     <div className="text-white text-base lg:text-base  ">Duration : June 2024 to May 2025</div>
+                                    <div className="text-white text-base lg:text-base  ">Duration : June 2024 to May 2025</div>
                                 </div>
                             </div>
                         </div>
@@ -185,11 +187,11 @@ const Education = () => {
                         " />
 
                         <div>
-                            {[ 
+                            {[
                                 { name: 'RVS College Of Arts And Science, Coimbatore', edu: 'Bachelor of Commerce in Computer Applications', logo: rvs_logo, year: '2021 - 2024' },
                                 { name: 'St. Michaels Higher Secondary School', edu: 'Higher Secondary Education', logo: stMichaels, year: '2019 - 2021' },
                                 { name: 'Govt Higher Secondary School', edu: 'Secondary Education', logo: govt_logo, year: '2019' },
-                                
+
                             ].map((educate, index) => (
                                 <div key={index} className="
                                                         md:flex
@@ -218,7 +220,7 @@ const Education = () => {
                                             md:mb-auto
                                             
                                             
-                                        " alt="logo"/>
+                                        " alt="logo" />
                                     </div>
                                     <div className="space-y-3 text-center md:text-left">
                                         <div className="text-base lg:text-2xl">{educate.edu}</div>
@@ -261,7 +263,7 @@ const Education = () => {
                             lg:grid-cols-2
                             gap-8
                         ">
-                            {[ 
+                            {[
                                 { course_name: 'Java Script', from: 'Coursera', course_logo: JavaScript_certificate },
                                 { course_name: 'React Fundamentals', from: 'Coursera', course_logo: ReactBasic_certificate },
                                 { course_name: 'React Advanced', from: 'Coursera', course_logo: ReactAdvance_certificate },
@@ -274,8 +276,8 @@ const Education = () => {
                                     text-center
                                 ">
                                     <div>
-                                        <img 
-                                            src={course.course_logo} 
+                                        <img
+                                            src={course.course_logo}
                                             className="
                                                 border-4
                                                 border-yellow-600
@@ -296,7 +298,7 @@ const Education = () => {
                                                 group-hover:cursor-pointer
                                                 transition
                                                 duration-500
-                                            " 
+                                            "
                                             alt="certificate"
                                         />
                                     </div>
@@ -343,7 +345,7 @@ const Education = () => {
 
 
 
-                                        
+
                                 </div>
                             ))}
                         </div>

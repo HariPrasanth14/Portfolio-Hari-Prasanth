@@ -11,23 +11,23 @@ import Education from "./components/Education";
 
 
 function App() {
-  
+
 
   return (
-<>
-  <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path='/navbar' element={<Navbar />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path='/contact' element = {<Contact />} />
-        <Route path='/project' element ={<Project />} />
-        <Route path='/sidebar' element={<Sidebar />} />
-        <Route path="/footer" element={<Footer />} />
-        <Route path='/education' element={<Education />} />
-     </Routes>
-</BrowserRouter> 
-</>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/navbar' element={<Navbar />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/project' element={<Project />} />
+          <Route path='/sidebar' element={<Sidebar />} />
+          <Route path="/footer" element={<Footer />} />
+          <Route path='/education' element={<Education />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

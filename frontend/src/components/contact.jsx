@@ -12,15 +12,15 @@ const Contact = () => {
 
 
   const [formData, setFormData] = useState({
-    name:'',email:'',message:''
+    name: '', email: '', message: ''
   })
 
-  const [status,setStatus] = useState()
+  const [status, setStatus] = useState()
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value
     })
   }
 
@@ -28,31 +28,30 @@ const Contact = () => {
     e.preventDefault()
     setStatus("Sending...")
 
-    try{
-      if(!formData.email || !formData.name || !formData.message){
+    try {
+      if (!formData.email || !formData.name || !formData.message) {
         setStatus("Please fill in all fields.");
-        setTimeout(()=>setStatus(""),4000)
+        setTimeout(() => setStatus(""), 4000)
         return;
       }
 
 
-      const response = await axios.post(`https://${HOST}/api/send-mail`,formData)            
-      console.log(response)
-      
-      if(response.data.message === "Email send successfully"){
+      const response = await axios.post(`https://${HOST}/api/send-mail`, formData)
+
+      if (response.data.message === "Email send successfully") {
         setStatus("Message send successfully!")
-      }else{
+      } else {
         setStatus(`Error: ${response.data.message}`);
       }
-      setTimeout(()=>{
+      setTimeout(() => {
         setFormData({
-          name:'',
-          email:'',
-          message:''
+          name: '',
+          email: '',
+          message: ''
         })
         setStatus("")
-      },4000)
-    }catch(err){
+      }, 4000)
+    } catch (err) {
       setStatus("Error sending message.")
     }
   }
@@ -183,24 +182,20 @@ const Contact = () => {
                       >
                         Send Message
                       </button>
-                      
-
-                      
-
-
-                      
                     </td>
                   </tr>
                 </tbody>
               </table>
             </form>
-            <p className="text-center text-white mt-4">{status}</p>
+            <p className=" text-center w-80 md:w-auto text-white mt-4">
+              {status}
+            </p>
           </div>
-          <div className=" p-8 md:p-20 ">
+          <div className=" p-8 md:px-20 md:py-10 ">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198100.7420830243!2d76.80241706882452!3d11.014261489796738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1736787864425!5m2!1sen!2sin"
               width="100%"
-               
+
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -215,7 +210,7 @@ const Contact = () => {
 
 
 
-      
+
       <Footer />
     </div>
   );

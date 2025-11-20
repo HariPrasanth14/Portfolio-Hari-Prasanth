@@ -16,7 +16,7 @@ const ContactItem = ({ Icon, title, content, link }) => (
       <Icon />
     </div>
     {link ? (
-      <a href={link}>
+      <a href={link} target='_blank' rel='noreferrer'>
         <div>
           <h2 className="
             font-semibold 
@@ -50,18 +50,18 @@ const ContactItem = ({ Icon, title, content, link }) => (
 const Sidebar = () => {
 
 
-const titles = ['Web Developer','Frontend Developer', 'Backend Developer' ,'Fullstack Developer' ,'MERN Developer']
+  const titles = ['Web Developer', 'Frontend Developer', 'Backend Developer', 'Fullstack Developer', 'MERN Developer']
 
-const [index , setIndex]=useState(0)
+  const [index, setIndex] = useState(0)
 
-useEffect(()=>{
-  const interval = setInterval(() => {
-      setIndex((prev)=>(prev+1) % titles.length)
-  }, 3000);
-  return ()=>clearInterval(interval)
-},[])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % titles.length)
+    }, 3000);
+    return () => clearInterval(interval)
+  }, [])
 
-  
+
   return (
     <div className="
       sidebar-component 
@@ -74,22 +74,22 @@ useEffect(()=>{
       rounded-3xl 
       shadow-[0_0_8px_white]
     ">
-      <img 
-        src={dpImg} 
-        alt="dp image" 
+      <img
+        src={dpImg}
+        alt="dp image"
         className="
           rounded-3xl 
           mb-4
           shadow-[0_0_5px_1px_white]
           border
           border-black
-        " 
+        "
         style={{
           height: '230px',
           width: '230px'
-        }} 
+        }}
       />
-      
+
       <h1 className="
         text-center 
         my-5 
@@ -101,7 +101,7 @@ useEffect(()=>{
         xl:text-3xl
         font-serif
       ">
-        Hari Prasanth 
+        Hari Prasanth
       </h1>
 
       <p className="
@@ -120,7 +120,7 @@ useEffect(()=>{
         <span className="text-yellow-400">&lt;</span> {titles[index]}  <span className="text-yellow-400">&#47;</span>
         <span className="text-yellow-400">&gt;</span>
       </p>
-      
+
       <hr className="
         mt-8 
         mb-5
@@ -151,12 +151,12 @@ useEffect(()=>{
           content="https://github.com/HariPrasanth14"
           link="https://github.com/HariPrasanth14"
         />
-      <ContactItem
-        Icon={FaLocationDot}
-        title="Address"
-        content="Coimbatore - 103"
-        link="/contact"
-      />
+        <ContactItem
+          Icon={FaLocationDot}
+          title="Address"
+          content="Coimbatore - 103"
+          link="/contact"
+        />
       </div>
     </div>
   );

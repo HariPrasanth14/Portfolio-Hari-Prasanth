@@ -23,10 +23,10 @@ import { useEffect } from "react";
 const VITE_HOST = import.meta.env.VITE_HOST
 
 function Home() {
-    
-    
-    useEffect(()=>{
-        async function startServer () {
+
+
+    useEffect(() => {
+        async function startServer() {
             try {
                 const response = await axios.get(`https://${VITE_HOST}/api/backend-start`);
                 console.log(response.data.message);
@@ -35,15 +35,15 @@ function Home() {
             }
         }
 
-    startServer()
+        startServer()
 
-,[]
+            , []
     }
     )
     return (
         <div className="bg-gray-900 px-8 lg:px-4 xl:px-8 py-5">
 
-             <div className="
+            <div className="
                 container-box 
                 flex-row 
                 md:flex-row
@@ -72,7 +72,7 @@ function Home() {
                     text-white 
                     my-5 
                     rounded-3xl
-                "> 
+                ">
                     <Navbar />
                     <div className="
                         content-area 
@@ -94,9 +94,9 @@ function Home() {
                                 font-serif 
                                 font-bold 
                                 text-yellow-400
-                                ' style={{letterSpacing: '2px'}}
+                                ' style={{ letterSpacing: '2px' }}
                             >Hari</span>, a web developer who’s passionate about turning ideas into reality through code. I specialize in both front-end and back-end development, creating responsive websites that are visually engaging and highly functional. I enjoy crafting designs that capture attention and working with databases to ensure everything runs seamlessly.
-                            <br/><br/>
+                            <br /><br />
                             What started as a hobby quickly grew into a career I’m truly passionate about ❤️. I’m always curious and eager to learn 📚, keeping up with new technologies to sharpen my skills. My goal is simple: to create web solutions that are as functional as they are creative, making the web a better place for everyone.
                         </p>
 

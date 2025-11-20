@@ -33,18 +33,18 @@ function Resume() {
         ">
           <Navbar />
 
-        
 
-         
-        
-          
+
+
+
+
 
           <div className="flex-row pb-2">
-            <img 
-              src={resume_one} 
-              alt="resume image" 
+            <img
+              src={resume_one}
+              alt="resume image"
 
-              
+
               className="
                           w-full
                           px-7
@@ -54,13 +54,13 @@ function Resume() {
                           mt-5 
                           xl:py-0
                           
-                          " 
+                          "
             />
-             <img 
-              src={resume_two} 
-              alt="resume image" 
+            <img
+              src={resume_two}
+              alt="resume image"
 
-              
+
               className="
                           w-full
                           px-7
@@ -70,25 +70,25 @@ function Resume() {
                            mb-5
                           xl:py-0
                           
-                          " 
+                          "
             />
-          
 
-          
-           <button className="bookmarkBtn 
+
+
+            <button className="bookmarkBtn 
                           mx-auto 
                           mb-7
                           
                           
            ">
-          <a href={hari_resume} download='Hari-Prasanth-M-FSD.pdf' className=" flex ">
-            <span className="IconContainer">
-              <FaDownload className="text-black" />
-              
-            </span>
-            <p className="text">Resume</p>
-            </a>
-          </button>
+              <a href={hari_resume} download='Hari-Prasanth-M-FSD.pdf' className=" flex ">
+                <span className="IconContainer">
+                  <FaDownload className="text-black" />
+
+                </span>
+                <p className="text">Resume</p>
+              </a>
+            </button>
           </div>
 
         </div>

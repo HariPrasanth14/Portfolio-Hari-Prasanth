@@ -9,7 +9,7 @@ function Navbar() {
     const pageTitle = {
         '/': 'About Me',
         '/resume': 'Resume',
-        '/project': 'Project',
+        '/project': 'Projects',
         '/contact': "Contact",
         '/education': 'Career',
     };
@@ -19,25 +19,25 @@ function Navbar() {
     return (
         <div className="">
             <div className="flex justify-between">
-                 <div className="mx-10 my-5">
+                <div className="mx-10 my-5">
                     <h2 className="text-3xl font-bold font-serif">
                         {currentPage}
                         <hr className="w-16 h-1 my-1 rounded-bl-full rounded-tr-full bg-yellow-500" />
                     </h2>
                 </div>
 
-                 <div>
+                <div>
                     <div>
-                     <button
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        className="lg:hidden relative py-5 p-2 rounded-md focus:outline-none mx-8"
-                        
-                    >
-                        {menuOpen ? <X size={28} /> : <MenuIcon size={28} />}
-                    </button>
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className="lg:hidden relative py-5 p-2 rounded-md focus:outline-none mx-8"
+
+                        >
+                            {menuOpen ? <X size={28} /> : <MenuIcon size={28} />}
+                        </button>
                     </div>
 
-                     <div className={`lg:flex ${menuOpen ? 'block' : 'hidden'} transition-all duration-300 ease-in-out`}>
+                    <div className={`lg:flex ${menuOpen ? 'block' : 'hidden'} transition-all duration-300 ease-in-out`}>
                         <ul className="nav-list 
                         flex 
                         flex-col 
