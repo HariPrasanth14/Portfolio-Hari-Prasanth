@@ -19,6 +19,8 @@ import monogdb from "../assets/mongodb.png";
 import Footer from "./footer";
 import axios from "axios"
 import fastApi from "../assets/fastApi.png"
+import nestJs from "../assets/nestjs1.png"
+import typeScript from "../assets/Typescript_logo.png"
 import { useEffect } from "react";
 const VITE_HOST = import.meta.env.VITE_HOST
 
@@ -137,8 +139,10 @@ function Home() {
                                 { img: Boot_img, name: "Bootstrap", title: "A CSS framework for responsive and fast UI development" },
                                 { img: tailwind_img, name: "Tailwind CSS", title: "A utility-first CSS framework for rapid styling" },
                                 { img: Javacript_icon, name: "JavaScript", title: "Adds interactivity and dynamic features to websites" },
+                                { img: typeScript, name: "TypeScript", title: "TypeScript for strong typing and enhanced developer experience." },
                                 { img: react_icon, name: "React", title: "A JavaScript library for building modern web applications" },
                                 { img: node_icon, name: "Node.js & Express.js", title: "Backend technologies for building web applications" },
+                                { img: nestJs, name: "NestJs", title: "NestJS is a progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications" },
                                 { img: python_icon, name: "Python", title: "A versatile programming language used for web, AI, and more" },
                                 { img: fastApi, name: "Fast Api", title: "Fastest Python web framework" },
                                 { img: Flask_logo, name: "Flask", title: "A lightweight Python web framework" },
